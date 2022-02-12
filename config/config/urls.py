@@ -15,11 +15,12 @@ Including another URLconf
 """
 # noinspection PyUnresolvedReferences
 from django.contrib import admin
-from django.urls import path  # include を追記
+from django.urls import path, include  # include を追記
 
 # stamprally02_appフォルダ内のviews.pyをインポート
-from stamprally02_app import views as views
+# from stamprally02_app import views as views
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    # path('', views.index, name='index'),
+    path('', include('stamprally02_app.urls')),
 ]
