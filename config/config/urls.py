@@ -13,7 +13,9 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import path
+# noinspection PyUnresolvedReferences
+from django.contrib import admin
+from django.urls import path  # include を追記
 
 # stamprally02_appフォルダ内のviews.pyをインポート
 from stamprally02_app import views as views

@@ -1,6 +1,5 @@
-# noinspection PyUnresolvedReferences
-# Create your views here.
 
+# Create your views here.
 # noinspection PyUnresolvedReferences
 from django.http import HttpResponse
 # noinspection PyUnresolvedReferences
@@ -13,8 +12,13 @@ from . import views
 
 
 # View関数を任意に定義
+
+
 def index(request):
-    # 変数設定
-    params = {"message_me": "Hello World"}
-    # 出力
-    return render(request, 'App_Folder_HTML/index.html', context=params)
+    template_name = 'App_Folder_HTML/index.html'  # templates以下のパスを書く
+    return render(request, template_name)
+
+
+def new(request):  # 新しくnew.htmlを追加
+    template_name = 'App_Folder_HTML/new.html'
+    return render(request, template_name)
