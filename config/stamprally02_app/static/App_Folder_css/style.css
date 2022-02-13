@@ -2,11 +2,12 @@
 
 body{
 margin:0;
+background:#211E1E;
 }
 
 #wrap{
 width:500px;
-height:1200px;
+background:#FFF;
 border:1px solid #ccc;
 margin:0 auto;
 }
@@ -15,15 +16,52 @@ button{
 margin-left:10px;
 }
 
-p{
-margin:0px 0px 50px 100px;
 
+button{
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #67c5ff;
+  border: solid 2px #67c5ff;
+  border-radius: 3px;
+  transition: .4s;
+  background:#fff;
 }
 
-h1{
 
+button:hover{
+  background: #67c5ff;
+  color: white;
+}
+
+
+#sample {
+    width: 500px;
+    height: 100px;
 }
 
 p{
+margin:30px 0px 0px 80px;
+}
+
+hr{
+width:450px;
+margin-top:30px;
+margin-bottom:50px;
+}
+
+
+.mainlogo{
+width:400px;
+margin-left:50px;
+}
+
+
+#address{
+font-size:small;
+width:400px;
+background-color:#d5c6c5;
+margin-left:auto;
+margin-right:auto;
 
 }

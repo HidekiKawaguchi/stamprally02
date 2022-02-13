@@ -6,42 +6,107 @@
     <title></title>
     <link rel="stylesheet" href='{% static "App_Folder_css/style.css" %}'/>
 
+
+    <script type="text/javascript">// <![CDATA[
+
+function getPosition() {
+if (navigator.geolocation) {
+   navigator.geolocation.getCurrentPosition(function(position) {
+   //s = position.coords.latitude+","+position.coords.longitude;
+   //document.getElementById('latlng').innerHTML = s;
+
+   var geocoder;
+   geocoder = new google.maps.Geocoder();
+   var myLatlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude)
+   geocoder.geocode({ 'latLng': myLatlng }, function(results, status) {
+      document.getElementById('address').innerHTML = "チェックイン完了!!チェックインした場所はこちら!!" + results[0].formatted_address;
+   }
+   );
+
+
+
+ });
+} else {
+  alert("I'm sorry, but geolocation services are not supported by your browser.");
+}
+}
+// ]]>
+    </script>
+
+
 </head>
+
+
 <body>
+
+
 <div id="wrap">
 
-    <h1><img src="{% static " images/app_top_logo.png"%}"></h1>
+    <h1><img src="{% static " images/app_top_logo.png"%}" class="mainlogo"></h1>
 
     <div id="main">
-        <p>長島製作所 平泉工場
-            <button type="button">チェックイン</button>
-            <button type="button" onclick="location.href='https://goo.gl/maps/j2KecYnvQUk5rMo2A'">アクセス</button>
-        </p>
+
+        <img src="{% static " images/pic_001.jpg"%}" class="mainlogo">
         <p>中尊寺
             <button type="button">チェックイン</button>
             <button type="button" onclick="location.href='https://goo.gl/maps/Zww6Nqi4CuMYhrd87'">アクセス</button>
         </p>
+
+
+        <hr>
+        <img src="{% static " images/pic_002.jpg"%}" class="mainlogo">
+
         <p>毛越寺
             <button type="button">チェックイン</button>
             <button type="button" onclick="location.href='https://goo.gl/maps/sWofSv3WqVgQRQy87'">アクセス</button>
         </p>
+
+
+        <hr>
+        <img src="{% static " images/pic_003.jpg"%}" class="mainlogo">
+
         <p>観自在王院跡
+
             <button type="button">チェックイン</button>
             <button type="button" onclick="location.href='https://goo.gl/maps/KEPczxxwRaEZiu9q7'">アクセス</button>
         </p>
+
+
+        <hr>
+        <img src="{% static " images/pic_004.jpg"%}" class="mainlogo">
         <p>無量光院跡
+
             <button type="button">チェックイン</button>
             <button type="button" onclick="location.href='https://goo.gl/maps/34YomCBj9ZBRe4x96'">アクセス</button>
         </p>
+
+
+        <hr>
+        <img src="{% static " images/pic_005.jpg"%}" class="mainlogo">
         <p>金鶏山
+
             <button type="button">チェックイン</button>
             <button type="button" onclick="location.href='https://goo.gl/maps/Kz3dGdRmp1vcrLCk8'">アクセス</button>
         </p>
+
+
+        <hr>
+        <img src="{% static " images/IMG_7856.jpg"%}" class="mainlogo">
+        <p>長島製作所 平泉工場
+            <button type="button" onclick="location.href='https://goo.gl/maps/j2KecYnvQUk5rMo2A'">アクセス</button>
+            <button onclick="getPosition();">チェックインする</button>
+
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPhlvcNGjb7wK7ae4ookisw_rownwBtx8&callback=initMap"></script>
+
+        </p>
+
+        <div id="address"></div>
+
+        <hr>
+
+
     </div>
 
-    <p> ログアウトは
-        <a href="">こちら</a>
-    </p>
 </div>
 </body>
 </html>

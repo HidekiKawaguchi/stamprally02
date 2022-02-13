@@ -2,7 +2,7 @@ import os
 
 from django.contrib.gis.utils import LayerMapping
 
-from config.stamprally02_app.models import Border
+from stamprally02_app.models import Border
 
 # ModelとGeojsonのマッピング
 mapping = {
