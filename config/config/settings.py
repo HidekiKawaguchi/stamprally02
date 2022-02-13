@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'stamprally02_app',
+    'django.contrib.gis',  # gis を追加
 ]
 
 MIDDLEWARE = [
@@ -86,8 +87,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'postgisdb',  # データベース名
+        'USER': 'dbuser',  # DBユーザ名
+        'PASSWORD': 'passwords',  # DBパスワード
     }
 }
 
@@ -114,7 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'ja'
 
-TIME_ZONE = 'ASIA'
+TIME_ZONE = 'Asia/Tokyo'
 
 USE_I18N = True
 
@@ -124,9 +129,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    STATIC_DIR,
-]
+# STATICFILES_DIRS = [
+#     STATIC_DIR,
+# ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

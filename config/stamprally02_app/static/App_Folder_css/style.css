@@ -1,0 +1,29 @@
+/* 全ページ共通デザイン */
+
+body{
+margin:0;
+}
+
+#wrap{
+width:500px;
+height:1200px;
+border:1px solid #ccc;
+margin:0 auto;
+}
+
+button{
+margin-left:10px;
+}
+
+p{
+margin:0px 0px 50px 100px;
+
+}
+
+h1{
+
+}
+
+p{
+
+}

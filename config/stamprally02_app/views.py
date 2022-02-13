@@ -22,3 +22,13 @@ def index(request):
 def new(request):  # 新しくnew.htmlを追加
     template_name = 'App_Folder_HTML/new.html'
     return render(request, template_name)
+
+
+def login(request):  # ログイン画面
+    template_name = 'App_Folder_HTML/login.html'
+    return render(request, template_name)
+
+
+def home(request):  # ログイン画面
+    template_name = 'App_Folder_HTML/home.html'
+    return render(request, template_name)

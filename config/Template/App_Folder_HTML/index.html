@@ -8,15 +8,19 @@
     <link rel="stylesheet" href='{% static "App_Folder_css/style.css" %}'/>
 </head>
 <body>
+
 <header>
     <h1>H1-logo</h1>
 </header>
-ログインしてください。<a href="top.html">あいうえ</a>
+Testログインしてください。<a href="{% url 'new' %}">あいうえ</a>
 
-<p> {{message_me}}</p>
+<img src="{% static " images/23104893_s.jpg"%}">
+
 
 <footer>
     <p>Copyright Hideki Kawaguchi.</p>
 </footer>
+
+
 </body>
 </html>

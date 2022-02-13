@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="ja" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>ログイン | 平泉町スタンプラリー</title>
+    <link rel="stylesheet" href='{% static "App_Folder_css/style.css" %}'/>
+</head>
+<body>
+<header>
+    <h1>ログインページ</h1>
+</header>
+<h2>ログインページ</h2>
+
+
+<form method="post" action="">
+
+    <table class="reg_form">
+        <tr>
+            <td><label for="userid">ユーザーID:</label></td>
+            <td><input type="text" name="userid"></td>
+            <td><label for="password">パスワード：</label></td>
+            <td><input type="password" name="password"></td>
+        </tr>
+    </table>
+
+    <input type="submit" class="btn" value="Login">
+</form>
+
+
+<footer>
+    <p>Copyright Hideki Kawaguchi.</p>
+</footer>
+</body>
+</html>

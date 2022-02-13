@@ -22,5 +22,6 @@ from django.urls import path, include  # include を追記
 
 urlpatterns = [
     # path('', views.index, name='index'),
+    # path('admin/', admin.site.urls),
     path('', include('stamprally02_app.urls')),
 ]
